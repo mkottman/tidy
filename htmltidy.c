@@ -34,7 +34,7 @@ static const struct luaL_reg luatidy_funcs[] =
 };
 
 
-LUATIDY_API int luaopen_htmltidy (lua_State *L) 
+LUATIDY_API int luaopen_luahtmltidy (lua_State *L) 
 {  
 	createDocMetaTable(L);
 	createNodeMetaTable(L);  

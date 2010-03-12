@@ -8,7 +8,6 @@
 #include <lauxlib.h>
 #include <tidy.h>
 #include <buffio.h>
-#include "compat-5.1.h"
 
 #ifndef BOOL 
 #define BOOL int
