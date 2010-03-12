@@ -127,7 +127,6 @@ int push_node( lua_State *L , TidyNode Node, pTidy t)
 int push_node_attributes(lua_State *L, TidyNode node)
 {
     TidyAttr t;
-    int i=1;
     t = tidyAttrFirst ( node );
     if ( !t ) return 0;
     
@@ -136,12 +135,6 @@ int push_node_attributes(lua_State *L, TidyNode node)
         lua_pushstring(L, tidyAttrName (t));
         lua_pushstring(L, tidyAttrValue (t));
         lua_settable(L,-3);
-        
-        lua_pushnumber(L, i);
-        lua_pushstring(L, tidyAttrName(t));
-        lua_settable(L,-3);
-        i++;
-        
         t = tidyAttrNext ( t );
     }
     return 1;
