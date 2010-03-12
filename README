@@ -38,7 +38,9 @@ which reports as 1 September 2005
 Documentation
 -------------
 
-<tidy object> = htmltidy.new()
+require 'tidy'
+
+<tidy object> = tidy.new()
   on Windows with the new Hashing routines best to use 1 object
   per parse.
     

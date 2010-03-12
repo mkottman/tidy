@@ -23,7 +23,7 @@
     
 #define LUATIDY_API	extern
 
-#define LUATIDY_LIBNAME	"htmltidy"
+#define LUATIDY_LIBNAME	"tidy"
 #define LUATIDY_HANDLE	"htmltidymeta"
 #define LUATIDY_NODE_HANDLE	    "htmltidymetanode"
 #define LUATIDY_ATTRIB_HANDLE	"htmltidymetaattrib"
