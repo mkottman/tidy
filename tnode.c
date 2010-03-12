@@ -24,6 +24,7 @@ static pTidyNode toTidyNode(lua_State *L, int cindex )
 int lua_tidy_node_getAttribute(lua_State *L)
 {    
     pTidyNode n = toTidyNode(L,1);    
+    lua_newtable(L);
     return push_node_attributes(L, n->node);
 }
 

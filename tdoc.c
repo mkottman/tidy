@@ -274,12 +274,7 @@ static void traverseNodes(TidyDoc doc, lua_State *L, TidyNode node)
         case TidyNode_StartEnd:
             lua_newtable(L);
         
-            if ( push_node_attributes(L, node) == 1 )
-            {
-                lua_pushstring(L, "attr");
-                lua_insert(L,-2);
-                lua_rawset(L,-3);
-            }
+            push_node_attributes(L, node);
             
             lua_pushstring(L,"tag");
             lua_pushstring(L, tidyNodeGetName (node));  

@@ -120,7 +120,7 @@ int push_node( lua_State *L , TidyNode Node, pTidy t)
     return 1;
 }
 
-/* pushes a table with attributes onto the stack
+/* inserts the attributes into the table on top of stack
    if it returns 1, if it returns 0 there where no
    attributes and nothing was pushed onto the stack.
 */
@@ -130,8 +130,6 @@ int push_node_attributes(lua_State *L, TidyNode node)
     int i=1;
     t = tidyAttrFirst ( node );
     if ( !t ) return 0;
-    
-    lua_newtable(L);
     
     while ( t ) 
     {
